@@ -1,13 +1,16 @@
 #!/bin/bash
-
+s=`gpio read 5`
 for (( c=0; c<=15; ))
 do
-	s=`gpio read 5`
-	if [ $s -eq 0 ]
-	then
-		c=$((c+1))
-		sleep 0.2s
-	fi
+	while [ $s -eq 1 ] 
+	do 
+		s=`gpio read 5`
+	done
+	c=$((c+1))
+	while [ $s -eq 0 ]
+	do
+		s=`gpio read 5`
+	done
 	./setbits.sh $c
 
 done
