@@ -32,7 +32,7 @@ gets one button press at a time
 ./waitButton.sh
 ```
 
-counts number of times button is pressed up to 16
+counts number of times button pressed, up to 16
 
 ```bash
 ./countButtonPress.sh
