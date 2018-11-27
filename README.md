@@ -12,6 +12,11 @@ In terminal
 git clone https://github.com/Vrandus/gpio-input.git
 ```
 
+may need to change file permissions
+
+```bash
+chmod 755 <filename>
+```
 ## Usage
 
 initialize pin modes
